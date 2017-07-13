@@ -14,5 +14,10 @@ function show($status,$msg,$data){
 
 //配合特殊字符进行md5加密
 function getMd5Password($password){
-    return md5($password . C('MD5_PRE'));
+    return md5($password.C('MD5_PRE'));
+}
+
+//获取session中的登陆用户名
+function getLoginUsername(){
+    return $_SESSION['adminUser']['username'] ? $_SESSION['adminUser']['username'] : '';
 }

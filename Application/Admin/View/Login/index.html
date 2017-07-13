@@ -46,7 +46,7 @@
     </form>
 
 </div> <!-- /container -->
-<script src="Public/js/jquery-2.1.4.min.js"></script>
+<script src="Public/js/jquery.js"></script>
 <script src="Public/js/dialog/layer.js"></script>
 <script src="Public/js/dialog.js"></script>
 <script src="Public/js/admin/login.js"></script>

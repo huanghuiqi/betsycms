@@ -8,10 +8,11 @@ class AdminModel extends Model{
     public function __construct()
     {
         //实例化admin这个表  配置文件db.php已经给所有表添加了前缀，所以这李不需要添加
-        $this->_db = M('Admin');
+        $this->_db = M('admin');
     }
 
     public function getAdminByUsername($username){
         $ret = $this->_db->where('username="'.$username.'"')->find();
+        return $ret;
     }
 }
