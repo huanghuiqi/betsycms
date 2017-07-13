@@ -16,11 +16,15 @@ var login = {
         }
 
         // 执行异步请求
+        //var url = 'index.php?m=admin&c=login&a=check';
         var url = 'index.php?m=admin&c=login&a=check';
         data = {'username':username,'password':password};
         $.post(url,data,function(res){
             if(res.status == 0){
                 return dialog.error(res.message);
+            }
+            if(res.status ==1){
+                return dialog.success(res.message,'admin.php');
             }
         },'JSON');
     }
