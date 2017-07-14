@@ -21,3 +21,20 @@ function getMd5Password($password){
 function getLoginUsername(){
     return $_SESSION['adminUser']['username'] ? $_SESSION['adminUser']['username'] : '';
 }
+
+//获取菜单的URL
+function getAdminMenuUrl($nav){
+    $url = 'admin.php?c='.$nav['c'].'&a='.$nav['a'];
+    if($nav['f'] == 'index'){
+        $url = 'admin.php?c='.$nav['c'];
+    }
+    return $url;
+}
+
+function getActive($navc){
+    $c = strtolower(CONTROLLER_NAME);
+    if(strtolower($navc) == $c) {
+        return 'class="active"';
+    }
+    return '';
+}
