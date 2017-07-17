@@ -80,6 +80,11 @@ return array(
     'DATA_CACHE_SUBDIR'      => false, // 使用子目录缓存 (自动根据缓存标识的哈希创建子目录)
     'DATA_PATH_LEVEL'        => 1, // 子目录缓存级别
 
+    'TMPL_CACHE_ON'   => false,  // 默认开启模板编译缓存 false 的话每次都重新编译模板
+    'ACTION_CACHE_ON'  => false,  // 默认关闭Action 缓存
+    'HTML_CACHE_ON'   => false,   // 默认关闭静态缓存
+
+
     /* 错误设置 */
     'ERROR_MESSAGE'          => '页面错误！请稍后再试～', //错误显示信息,非调试模式有效
     'ERROR_PAGE'             => '', // 错误定向页面
