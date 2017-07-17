@@ -3,7 +3,7 @@ namespace Admin\Controller;
 
 use Think\Controller;
 
-class IndexController extends Controller{
+class IndexController extends CommonController{
     public function index(){
         //如果已经退出再打开是跳转到登录页
         if(!session('adminUser')){

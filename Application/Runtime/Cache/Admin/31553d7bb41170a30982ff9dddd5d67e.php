@@ -194,7 +194,7 @@
 
     var SCOPE = {
         'save_url' : 'admin.php?c=menu&a=add',
-        'jump_url' : 'admin.php?c=menu',
+        'jump_url' : 'admin.php?c=menu',  //添加操作-提交的时候
     }
 </script>
 <script src="Public/js/admin/common.js"></script>
