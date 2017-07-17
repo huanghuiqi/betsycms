@@ -5,10 +5,16 @@
  */
 
 /* Global Styles */
+html{
+    width:100%;
+    height:100%;
+}
 
 body {
     margin-top: 100px;
     background-color: #222;
+    width:100%;
+    height:100%;
 }
 
 @media(min-width:768px) {
@@ -19,10 +25,13 @@ body {
 
 #wrapper {
     padding-left: 0;
+    width: 100%;
+    height:100%;
 }
 
 #page-wrapper {
     width: 100%;
+    height:100%;
     padding: 0;
     background-color: #fff;
 }
