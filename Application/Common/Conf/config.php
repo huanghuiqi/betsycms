@@ -7,4 +7,9 @@ return array(
     'TMPL_CACHE_ON' => false,//禁止模板编译缓存
     'HTML_CACHE_ON' => false,//禁止静态缓存
 
+    //URL地址不区分大小写
+    'URL_CASE_INSENSITIVE' =>true,
+    'URL_MODEL'=>0,
+    'HTML_FILE_SUFFIX' => '.html',
+
 );

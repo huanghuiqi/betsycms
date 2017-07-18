@@ -38,3 +38,20 @@ function getActive($navc){
     }
     return '';
 }
+
+//菜单列表类型
+function getMenuType($type){
+    return $type==1 ? "后台导航" : "前台导航";
+}
+
+//菜单列表状态
+function getStatus($status){
+    if($status == 0){
+        $str = "关闭";
+    }elseif ($status == 1){
+        $str = "开启";
+    }elseif ($status == -1){
+        $str = "删除";
+    }
+    return $str;
+}

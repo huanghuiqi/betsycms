@@ -12,26 +12,26 @@
 
     <title>新闻后台管理平台</title>
     <!-- Bootstrap Core CSS -->
-    <link href="Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="Public/css/sb-admin.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="Public/css/plugins/morris.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="Public/css/sing/common.css" />
-    <link rel="stylesheet" href="Public/css/party/bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" href="Public/css/party/uploadify.css">
+    <link href="/news_cms/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/news_cms/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/news_cms/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/news_cms/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
-    <script src="Public/js/jquery.js"></script>
-    <script src="Public/js/bootstrap.min.js"></script>
-    <script src="Public/js/dialog/layer.js"></script>
-    <script src="Public/js/dialog.js"></script>
-    <script type="text/javascript" src="Public/js/party/jquery.uploadify.js"></script>
+    <script src="/news_cms/Public/js/jquery.js"></script>
+    <script src="/news_cms/Public/js/bootstrap.min.js"></script>
+    <script src="/news_cms/Public/js/dialog/layer.js"></script>
+    <script src="/news_cms/Public/js/dialog.js"></script>
+    <script type="text/javascript" src="/news_cms/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -104,13 +104,13 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <form action="/admin.php" method="get">
+            <form action="admin.php" method="get">
 
                 <div class="input-group">
                     <span class="input-group-addon">类型</span>
-                    <select class="form-control" name="type">
-                        <option value='' >请选择类型</option>
-
+                    <select class="form-control" name="type" >
+                        <option selected="selected" disabled="disabled" >请选择类型</option>
+                        <!--<option value="" <?php if($type != -1): ?>selected="selected"<?php endif; ?>>全部菜单</option>-->
                         <option value="1" <?php if($type == 1): ?>selected="selected"<?php endif; ?>>后台菜单</option>
                         <option value="0" <?php if($type == 0): ?>selected="selected"<?php endif; ?>>前端导航</option>
                     <lect>
@@ -151,8 +151,8 @@
                                 <td><?php echo ($menu["menu_id"]); ?></td>
                                 <td><?php echo ($menu["name"]); ?></td>
                                 <td><?php echo ($menu["m"]); ?></td>
-                                <td><?php echo ($menu["type"]); ?></td>
-                                <td><?php echo ($menu["status"]); ?></td>
+                                <td><?php echo (getMenuType($menu["type"])); ?></td>
+                                <td><?php echo (getStatus($menu["status"])); ?></td>
                                 <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($menu["menu_id"]); ?>"></span>    <a href="javascript:void(0)" attr-id="<?php echo ($menu["menu_id"]); ?>" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -198,7 +198,7 @@
 </script>
 
 
-<script src="Public/js/admin/common.js"></script>
+<script src="/news_cms/Public/js/admin/common.js"></script>
 
 
 

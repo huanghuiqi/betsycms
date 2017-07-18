@@ -12,26 +12,26 @@
 
     <title>新闻后台管理平台</title>
     <!-- Bootstrap Core CSS -->
-    <link href="Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="Public/css/sb-admin.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="Public/css/plugins/morris.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="Public/css/sing/common.css" />
-    <link rel="stylesheet" href="Public/css/party/bootstrap-switch.css" />
-    <link rel="stylesheet" type="text/css" href="Public/css/party/uploadify.css">
+    <link href="/news_cms/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/news_cms/Public/css/sing/common.css" />
+    <link rel="stylesheet" href="/news_cms/Public/css/party/bootstrap-switch.css" />
+    <link rel="stylesheet" type="text/css" href="/news_cms/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
-    <script src="Public/js/jquery.js"></script>
-    <script src="Public/js/bootstrap.min.js"></script>
-    <script src="Public/js/dialog/layer.js"></script>
-    <script src="Public/js/dialog.js"></script>
-    <script type="text/javascript" src="Public/js/party/jquery.uploadify.js"></script>
+    <script src="/news_cms/Public/js/jquery.js"></script>
+    <script src="/news_cms/Public/js/bootstrap.min.js"></script>
+    <script src="/news_cms/Public/js/dialog/layer.js"></script>
+    <script src="/news_cms/Public/js/dialog.js"></script>
+    <script type="text/javascript" src="/news_cms/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -193,11 +193,11 @@
 <script>
 
     var SCOPE = {
-        'save_url' : 'admin.php?c=menu&a=add',
-        'jump_url' : 'admin.php?c=menu',  //添加操作-提交的时候
+        'save_url' : 'news_cms/admin.php?c=menu&a=add',
+        'jump_url' : 'news_cms/admin.php?c=menu',  //添加操作-提交的时候
     }
 </script>
-<script src="Public/js/admin/common.js"></script>
+<script src="/news_cms/Public/js/admin/common.js"></script>
 
 
 

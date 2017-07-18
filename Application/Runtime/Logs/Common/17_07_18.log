@@ -1,0 +1,150 @@
+[ 2017-07-18T10:12:41+08:00 ] ::1 /news_cms/admin.php/m=admin&c=menu&a=index&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+ERR: 无法加载模块:M=admin&c=menu&a=index&p=1
+
+[ 2017-07-18T11:44:00+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:01+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:02+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:02+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:13+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:13+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:14+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:14+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:44:39+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:45:42+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:46:19+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:48:03+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:48:31+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:49:00+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T11:52:14+08:00 ] ::1 /news_cms/admin.php/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+ERR: 无法加载模块:Login
+
+[ 2017-07-18T12:16:33+08:00 ] ::1 /news_cms/admin.php/admin.php/Admin/Login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T12:22:29+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T12:22:36+08:00 ] ::1 /news_cms/admin.php/admin.php/c/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+ERR: 无法加载模块:Admin.php
+
+[ 2017-07-18T14:04:32+08:00 ] ::1 /news_cms/__ROOT__/index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+ERR: 无法加载模块:__ROOT__
+
+[ 2017-07-18T14:09:24+08:00 ] ::1 /news_cms/__ROOT__/index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+ERR: 无法加载模块:__ROOT__
+
+[ 2017-07-18T15:02:11+08:00 ] ::1 /news_cms/news_cms/admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+ERR: 无法加载模块:News_cms
+
+[ 2017-07-18T15:19:06+08:00 ] ::1 /news_cms/news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+ERR: 无法加载模块:News_cms
+
+[ 2017-07-18T17:41:03+08:00 ] ::1 /news_cms/news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+ERR: 无法加载模块:News_cms
+
+[ 2017-07-18T18:19:43+08:00 ] ::1 /news_cms/news_cms/admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+ERR: 无法加载模块:News_cms
+

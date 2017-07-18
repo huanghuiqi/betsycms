@@ -2,7 +2,6 @@
  * Created by huanghuiqi on 2017/7/12.
  */
 //前端登陆的业务类
-
 var login = {
     check : function(){
         //获取登陆页面中的用户名和密码
@@ -29,3 +28,4 @@ var login = {
         },'JSON');
     }
 }
+

@@ -13,7 +13,7 @@
     <title>新闻内容管理平台</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/news_cms/Public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <!--<link href="signin.css" rel="stylesheet">-->
 
@@ -46,10 +46,10 @@
     </form>
 
 </div> <!-- /container -->
-<script src="Public/js/jquery.js"></script>
-<script src="Public/js/dialog/layer.js"></script>
-<script src="Public/js/dialog.js"></script>
-<script src="Public/js/admin/login.js"></script>
+<script src="/news_cms/Public/js/jquery.js"></script>
+<script src="/news_cms/Public/js/dialog/layer.js"></script>
+<script src="/news_cms/Public/js/dialog.js"></script>
+<script src="/news_cms/Public/js/admin/login.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
 </html>

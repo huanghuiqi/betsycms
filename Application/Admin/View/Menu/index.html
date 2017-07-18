@@ -25,13 +25,13 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <form action="/admin.php" method="get">
+            <form action="admin.php" method="get">
 
                 <div class="input-group">
                     <span class="input-group-addon">类型</span>
-                    <select class="form-control" name="type">
-                        <option value='' >请选择类型</option>
-
+                    <select class="form-control" name="type" >
+                        <option selected="selected" disabled="disabled" >请选择类型</option>
+                        <!--<option value="" <if condition="$type neq -1">selected="selected"</if>>全部菜单</option>-->
                         <option value="1" <if condition="$type eq 1">selected="selected"</if>>后台菜单</option>
                         <option value="0" <if condition="$type eq 0">selected="selected"</if>>前端导航</option>
                     <lect>
@@ -73,8 +73,8 @@
                                 <td>{$menu.menu_id}</td>
                                 <td>{$menu.name}</td>
                                 <td>{$menu.m}</td>
-                                <td>{$menu.type}</td>
-                                <td>{$menu.status}</td>
+                                <td>{$menu.type|getMenuType}</td>
+                                <td>{$menu.status|getStatus}</td>
                                 <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$menu.menu_id}"></span>    <a href="javascript:void(0)" attr-id="{$menu.menu_id}" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
                             </tr>
                         </volist>

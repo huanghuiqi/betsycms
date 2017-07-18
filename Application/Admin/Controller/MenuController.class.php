@@ -12,6 +12,12 @@ class MenuController extends CommonController{
         $pageSize = $_REQUEST['pageSize'] ? $_REQUEST['pageSize'] : 3;
         //获取数据
         $data = array();
+        if(isset($_REQUEST['type']) && in_array($_REQUEST['type'],array(0,1))){
+            $data['type'] = intval($_REQUEST['type']);
+            $this->assign('type',$data['type']);
+        }else{
+            $this->assign('type',-10);
+        }
         $menus = D('Menu') -> getMenus($data,$page,$pageSize);
         $menusCount = D('Menu') -> getMenusCount($data);
         //print_r($menusCount);
@@ -51,5 +57,18 @@ class MenuController extends CommonController{
         }else{
             $this->display();
         }
+    }
+
+    //编辑页面显示
+    public function edit(){
+        $menuID = $_GET['id'];
+        $menu = D('Menu')->find($menuID);
+        $this->assign('menu',$menu);
+        $this->display();
+    }
+
+    //更新操作
+    public function save(){
+
     }
 }
