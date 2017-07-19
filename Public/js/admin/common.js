@@ -50,14 +50,14 @@ $('#singcms-button-submit').on('click',function(){
     $(data).each(function(i){
         postData[this.name]=this.value;
     });
-    //console.log(postData);
     var url = SCOPE.save_url;
     var jump_url = SCOPE.jump_url;
-    // $.post(url,postData,function(res){
-    //     if(res.status == 1){
-    //         dialog.success(res.message,jump_url);
-    //     }else if(res.status == 0){
-    //         dialog.error(res.message);
-    //     }
-    // },'JSON')
+
+    $.post(url,postData,function(res){
+        if(res.status == 1){
+            dialog.success(res.message,jump_url);
+        }else if(res.status == 0){
+            dialog.error(res.message);
+        }
+    },'JSON')
 })
