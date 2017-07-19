@@ -185,7 +185,7 @@
 <script>
 
     var SCOPE = {
-        'save_url' : 'admin.php?c=menu&a=save',
+        'save_url' : 'admin.php?c=menu&a=add',
         'jump_url' : 'admin.php?c=menu',
     }
 </script>

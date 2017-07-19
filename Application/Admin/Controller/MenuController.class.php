@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 
 use Think\Controller;
+use Think\Exception;
 
 class MenuController extends CommonController{
     public function index(){
@@ -48,6 +49,10 @@ class MenuController extends CommonController{
             if(!isset($_POST['f']) || !$_POST['f']){
                 show(0,'方法名不能为空');
             }
+            //更新操作
+            if($_POST['menu_id']){
+                return $this->save($_POST);
+            }
             $menuID = D('Menu')->insert($_POST);
             if($menuID){
                 return show(1,"新增成功",$menuID);
@@ -68,7 +73,18 @@ class MenuController extends CommonController{
     }
 
     //更新操作
-    public function save(){
+    public function save($data){
+        $menuID = $data['menu_id'];
+        unset($data['menu_id']);  //除了id其他都可以更换，所以$data数组里面去掉这个id
 
+        try{
+            $id = D('Menu')->updateMenubyId($menuID,$data);
+            if($id === false){
+                return show(0,'更新失败');
+            }
+            return show(1,'更新成功');
+        }catch (Exception $e){
+            return show(0,$e->getMessage());
+        }
     }
 }
