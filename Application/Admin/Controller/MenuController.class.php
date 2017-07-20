@@ -87,4 +87,49 @@ class MenuController extends CommonController{
             return show(0,$e->getMessage());
         }
     }
+
+    //删除操作
+    public function setStatus(){
+        try{
+            if($_POST){
+                $menuID = $_POST['id'];
+                $status = $_POST['status'];
+                $res = D('Menu') -> updateStatusById($menuID,$status);
+                if(res){
+                    return show(1,"操作成功");
+                }else{
+                    return show(0,"操作失败");
+                }
+            }
+        }catch (Exception $e){
+            return show(0,$e->getMessage());
+        }
+        return show(0,"没有提交的数据");
+    }
+
+    //更新排序操作
+    public function listorder(){
+        $listorder = $_POST['listorder'];
+        $errors = [];
+        $jumpUrl = $_SERVER['HTTP_REFERER']; // 获取当前页面的地址
+        if($listorder){
+            try{
+                foreach ($listorder as $menuID=>$val){
+                    $id = D('Menu') -> updateMenuListorderById($menuID,$val);
+                    if($id === false){
+                        $errors[] = $menuID;
+                    }
+                }
+            }catch (Exception $e){
+                return show(0,$e->getMessage());
+//                array('jump_url'=>$jumpUrl)
+            }
+            if($errors){
+                return show(0,"排序失败-".implode(',',$errors));
+            }else{
+                return show(1,"排序成功");
+            }
+        }
+        return show(0,"排序顺序失败");
+    }
 }

@@ -135,7 +135,7 @@
                     <table class="table table-bordered table-hover singcms-table">
                         <thead>
                         <tr>
-                            <!--<th width="14">排序</th>-->
+                            <th width="14">排序</th>
                             <th>id</th>
                             <th>菜单名</th>
                             <th>模块名</th>
@@ -146,7 +146,7 @@
                         </thead>
                         <tbody>
                         <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><tr>
-                                <!--<td><input size="4" type="text" name="listorder[<?php echo ($menu["menu_id"]); ?>]" value="<?php echo ($menu["listorder"]); ?>"/></td>-->
+                                <td><input size="4" type="text" name="listorder[<?php echo ($menu["menu_id"]); ?>]" value="<?php echo ($menu["listorder"]); ?>"/></td>
                                 <!--<td><input size="4" type="text"/></td>-->
                                 <td><?php echo ($menu["menu_id"]); ?></td>
                                 <td><?php echo ($menu["name"]); ?></td>
@@ -192,7 +192,6 @@
         'edit_url' : 'admin.php?c=menu&a=edit',
         'set_status_url' : 'admin.php?c=menu&a=setStatus',
         'listorder_url' : 'admin.php?c=menu&a=listorder',
-
     }
 
 </script>

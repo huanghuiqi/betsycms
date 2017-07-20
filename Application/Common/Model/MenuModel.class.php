@@ -10,6 +10,7 @@ class MenuModel extends Model{
         $this -> _db = M('menu');
     }
 
+    //左侧菜单栏排序
     public function getAdminMenus(){
         $data = array(
           'status' => array('neq',-1),   //neq 不等于-1的意思
@@ -50,7 +51,30 @@ class MenuModel extends Model{
         if(!$data || !is_array($data)){
             throw_exception("更新的数据不合法");
         }
-        return $this -> _db -> where('menu_id='.$id) ->save($data);
+        return $this -> _db -> where('menu_id='.$id) -> save($data);
+    }
+
+    //通过status删除菜单记录
+    public function updateStatusById($id,$status){
+        if(!$id || !is_numeric($id)){
+            throw_exception("id不合法");
+        }
+        if(!$status || !is_numeric($status)){
+            throw_exception("status不合法");
+        }
+        $data['status'] = $status;
+        return $this -> _db -> where('menu_id='.$id) -> save($data);
+    }
+
+    //更新排序
+    public function updateMenuListorderById($id,$listorder){
+        if(!$id || !is_numeric($id)){
+            throw_exception("id不合法");
+        }
+        $data = array(
+          'listorder' => $listorder
+        );
+        return $this -> _db -> where('menu_id='.$id) -> save($data);
     }
 
     //菜单列表分页
