@@ -24,7 +24,7 @@
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i> <?php echo getLoginUsername()?> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -41,7 +41,6 @@
         <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
       </li>
       <volist name="navs" id="navo">
-      <!--<li {$navo.c|getActive}>-->
       <li {$navo.c|getActive}>
         <a href="{$navo|getAdminMenuUrl}"><i class="fa fa-fw fa-bar-chart-o"></i> {$navo.name}</a>
       </li>

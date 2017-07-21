@@ -82,7 +82,8 @@ class MenuModel extends Model{
     public function getMenus($data,$page,$pageSize=10){
         $data['status'] = array('neq',-1); //where条件就是 status<>-1
         $offset = ($page-1)*$pageSize;
-        $list = $this -> _db -> where($data) -> order('menu_id desc') -> limit($offset,$pageSize) ->select();
+        //如果order里面有两个desc 优先第一个排序完后再排序第二个
+        $list = $this -> _db -> where($data) -> order('listorder desc,menu_id desc') -> limit($offset,$pageSize) ->select();
         return $list;
     }
         //菜单总共的数目

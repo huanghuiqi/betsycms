@@ -24,15 +24,16 @@ function getLoginUsername(){
 
 //获取菜单的URL
 function getAdminMenuUrl($nav){
-    $url = 'admin.php?c='.$nav['c'].'&a='.$nav['a'];
+    $url = 'admin.php?c='.$nav['c'].'&a='.$nav['f'];
     if($nav['f'] == 'index'){
         $url = 'admin.php?c='.$nav['c'];
     }
     return $url;
 }
 
+//菜单选中高亮显示
 function getActive($navc){
-    $c = strtolower(CONTROLLER_NAME);
+    $c = strtolower(CONTROLLER_NAME);  //控制器
     if(strtolower($navc) == $c) {
         return 'class="active"';
     }

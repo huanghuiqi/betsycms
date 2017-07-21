@@ -1,0 +1,580 @@
+[ 2017-07-21T11:37:14+08:00 ] ::1 /news_cms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+
+[ 2017-07-21T11:37:14+08:00 ] ::1 /news_cms/admin.php?m=Admin&c=Index&a=admin.php&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+ERR: 非法操作:admin.php
+
+[ 2017-07-21T11:37:43+08:00 ] ::1 /news_cms/admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2017-07-21T11:37:52+08:00 ] ::1 /news_cms/index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for show(), called in C:\wamp\www\news_cms\Application\Admin\Controller\LoginController.class.php on line 38 and defined C:\wamp\www\news_cms\Application\Common\Common\function.php 第 5 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\news_cms\Application\Common\Common\function.php 第 10 行.
+
+[ 2017-07-21T11:37:53+08:00 ] ::1 /news_cms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 75 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: admincount C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 115 行.
+NOTIC: [8] Undefined variable: newscount C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 137 行.
+NOTIC: [8] Undefined variable: news C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 159 行.
+NOTIC: [8] Undefined variable: news C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 164 行.
+NOTIC: [8] Undefined variable: news C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 168 行.
+NOTIC: [8] Undefined variable: positioncount C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2017-07-21T11:37:54+08:00 ] ::1 /news_cms/admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY menu_id desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011983s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-07-21T11:42:04+08:00 ] ::1 /news_cms/admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2017-07-21T11:42:14+08:00 ] ::1 /news_cms/admin.php?type=1&c=menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012901s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2017-07-21T11:42:18+08:00 ] ::1 /news_cms/admin.php?m=Admin&c=Menu&a=index&type=1&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 3,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012802s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2017-07-21T11:44:48+08:00 ] ::1 /news_cms/admin.php?type=0&c=menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2017-07-21T11:44:54+08:00 ] ::1 /news_cms/admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0005s ]
+SQL: UPDATE `cms_menu` SET `listorder`='4' WHERE ( menu_id=8 ) [ RunTime:0.0002s ]
+SQL: UPDATE `cms_menu` SET `listorder`='3' WHERE ( menu_id=12 ) [ RunTime:0.0002s ]
+SQL: UPDATE `cms_menu` SET `listorder`='4' WHERE ( menu_id=3 ) [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 3 for show(), called in C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php on line 130 and defined C:\wamp\www\news_cms\Application\Common\Common\function.php 第 5 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\news_cms\Application\Common\Common\function.php 第 10 行.
+
+[ 2017-07-21T11:44:55+08:00 ] ::1 /news_cms/admin.php?type=0&c=menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2017-07-21T11:49:56+08:00 ] ::1 /news_cms/admin.php?type=0&c=menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2017-07-21T11:58:43+08:00 ] ::1 /news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 76 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined index: a C:\wamp\www\news_cms\Application\Common\Common\function.php 第 27 行.
+NOTIC: [8] Undefined variable: menus C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2017-07-21T11:59:05+08:00 ] ::1 /news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 76 行.
+NOTIC: [8] Undefined variable: menus C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000997s ]
+
+[ 2017-07-21T11:59:43+08:00 ] ::1 /news_cms/admin.php?c=content
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+ERR: 无法加载控制器:Content
+
+[ 2017-07-21T11:59:44+08:00 ] ::1 /news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 76 行.
+NOTIC: [8] Undefined variable: menus C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029229s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-07-21T11:59:45+08:00 ] ::1 /news_cms/admin.php?c=basic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+ERR: 无法加载控制器:Basic
+
+[ 2017-07-21T11:59:46+08:00 ] ::1 /news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 76 行.
+NOTIC: [8] Undefined variable: menus C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2017-07-21T11:59:47+08:00 ] ::1 /news_cms/admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 76 行.
+NOTIC: [8] Undefined variable: menus C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001121s ]
+
+[ 2017-07-21T12:00:27+08:00 ] ::1 /news_cms/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 75 行.
+NOTIC: [8] Undefined variable: admincount C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 114 行.
+NOTIC: [8] Undefined variable: newscount C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 136 行.
+NOTIC: [8] Undefined variable: news C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 158 行.
+NOTIC: [8] Undefined variable: news C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 163 行.
+NOTIC: [8] Undefined variable: news C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 167 行.
+NOTIC: [8] Undefined variable: positioncount C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 180 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001080s ]
+
+[ 2017-07-21T12:00:28+08:00 ] ::1 /news_cms/admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::listorder() should be compatible with Admin\Controller\CommonController::listorder($model = '') C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 12 行.
+NOTIC: [8] Undefined index: pageSize C:\wamp\www\news_cms\Application\Admin\Controller\MenuController.class.php 第 13 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) C:\wamp\www\news_cms\Application\Common\Model\MenuModel.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,3   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: index C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 76 行.
+NOTIC: [8] Undefined variable: nav C:\wamp\www\news_cms\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
