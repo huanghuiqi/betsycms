@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2017 at 10:06 AM
+-- Generation Time: Jul 21, 2017 at 10:21 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -71,17 +71,18 @@ CREATE TABLE `cms_menu` (
 INSERT INTO `cms_menu` (`menu_id`, `name`, `parentid`, `m`, `c`, `f`, `data`, `listorder`, `status`, `type`) VALUES
 (1, '菜单管理', 0, 'admin', 'menu', 'index', '', 10, 1, 1),
 (2, '文章管理', 0, 'admin', 'Content', 'index', '', 0, -1, 1),
-(3, '体育', 0, 'home', 'cat', 'index', '', 3, 1, 0),
+(3, '体育', 0, 'home', 'cat', 'index', '', 4, 1, 0),
 (4, '科技', 0, 'home', 'cat ', 'index', '', 0, -1, 0),
 (5, '汽车', 0, 'home', 'cat', 'index', '', 0, -1, 0),
 (6, '文章管理', 0, 'admin', 'content', 'index', '', 9, 1, 1),
 (7, '用户管理', 0, 'admin', 'user', 'index', '', 0, -1, 1),
-(8, '科技', 0, 'home', 'cat', 'index', '', 0, 1, 0),
+(8, '科技', 0, 'home', 'cat', 'index', '', 4, 1, 0),
 (9, '推荐位管理', 0, 'admin', 'position', 'index', '', 4, 1, 1),
 (10, '推荐位内容管理', 0, 'admin', 'positioncontent', 'index', '', 1, 1, 1),
-(11, '基本管理', 0, 'admin', 'basic', 'index', '', 0, 1, 1),
-(12, '新闻', 0, 'home', 'cat', 'index', '', 0, 1, 0),
-(13, '用户管理', 0, 'admin', 'admin', 'index', '', 0, 1, 1);
+(11, '基本管理', 0, 'admin', 'basic', 'index', '', 3, 1, 1),
+(12, '新闻', 0, 'home', 'cat', 'index', '', 3, 1, 0),
+(13, '用户管理', 0, 'admin', 'admin', 'index', '', 0, 1, 1),
+(17, '测试菜单4', 0, 'e', 'r', 'f', '', 0, -1, 1);
 
 -- --------------------------------------------------------
 
@@ -275,7 +276,7 @@ ALTER TABLE `cms_admin`
 -- AUTO_INCREMENT for table `cms_menu`
 --
 ALTER TABLE `cms_menu`
-  MODIFY `menu_id` smallint(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `menu_id` smallint(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `cms_news`
 --
