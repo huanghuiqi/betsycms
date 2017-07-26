@@ -1,0 +1,60 @@
+[ 2017-07-26T10:07:53+08:00 ] ::1 /news_cms/Public/js/kindeditor/kindeditor-all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:07:53+08:00 ] ::1 /news_cms/Public/js/admin/image.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:07:53+08:00 ] ::1 /news_cms/Public/js/kindeditor/kindeditor-all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:07:53+08:00 ] ::1 /news_cms/Public/js/admin/image.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:09:57+08:00 ] ::1 /news_cms/Public/js/admin/image.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:09:57+08:00 ] ::1 /news_cms/Public/js/kindeditor/kindeditor-all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:09:57+08:00 ] ::1 /news_cms/Public/js/kindeditor/kindeditor-all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:09:57+08:00 ] ::1 /news_cms/Public/js/admin/image.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:10:34+08:00 ] ::1 /news_cms/Public/js/kindeditor/kindeditor-all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+ERR: 无法加载模块:Public
+
+[ 2017-07-26T10:10:34+08:00 ] ::1 /news_cms/Public/js/kindeditor/kindeditor-all.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+ERR: 无法加载模块:Public
+
