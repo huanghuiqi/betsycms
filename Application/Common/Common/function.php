@@ -56,3 +56,13 @@ function getStatus($status){
     }
     return $str;
 }
+
+//返回kindEditor的内容 不能用show 另外定义一个方法
+function showKind($status,$data){
+    header('Content-type:application/json;charset=UTF-8');
+    if($status == 0){
+        exit(json_encode(array('error'=>0,'url'=>$data)));
+    }else{
+        exit(json_encode(array('error'=>1,'message'=>'上传失败')));
+    }
+}

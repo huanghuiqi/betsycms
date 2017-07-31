@@ -100,7 +100,7 @@
                 </div>
             </div>
             <!-- /.row -->
-            <div >
+            <div style=" margin-bottom: 20px;">
                 <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
             </div>
             <div class="row">
@@ -177,7 +177,7 @@
                                 </ul>
 
                             </nav>
-                            <div>
+                            <div style=" margin-bottom: 20px;">
                                 <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>
                             </div>
                         </form>
@@ -186,7 +186,7 @@
                                 <option value="0">请选择推荐位进行推送</option>
                                 <?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>"><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
                             </select>
-                            <button id="singcms-push" type="button" class="btn btn-primary">推送</button>
+                            <button id="singcms-push" type="button" class="btn btn-primary" style=" margin-top: 20px;">推送</button>
                         </div>
 
                     </div>

@@ -92,7 +92,7 @@
 
           <ol class="breadcrumb">
             <li>
-              <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=content">文章管理</a>
+              <i class="fa fa-dashboard"></i>  <a href="admin.php?c=content">文章管理</a>
             </li>
             <li class="active">
               <i class="fa fa-edit"></i> 文章添加
@@ -121,8 +121,12 @@
             <div class="form-group">
               <label for="inputname" class="col-sm-2 control-label">缩图:</label>
               <div class="col-sm-5">
+
                 <input id="file_upload"  type="file" multiple="true" >
+                <!--展示图片的 img 默认情况是隐藏的-->
                 <img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
+                <!--file_upload_image存放上传的图片的位置 提交的时候从这里获取数据-->
+
                 <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
               </div>
             </div>
@@ -131,7 +135,7 @@
               <div class="col-sm-5">
                 <select class="form-control" name="title_font_color">
                   <option value="">==请选择颜色==</option>
-                    <?php if(is_array($titleFontColor)): foreach($titleFontColor as $key=>$color): ?><option value="<?php echo ($key); ?>"><?php echo ($color); ?></option><?php endforeach; endif; ?>
+                  <?php if(is_array($titleFontColor)): foreach($titleFontColor as $key=>$color): ?><option value="<?php echo ($key); ?>"><?php echo ($color); ?></option><?php endforeach; endif; ?>
                 </select>
               </div>
             </div>
@@ -157,6 +161,7 @@
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">内容:</label>
               <div class="col-sm-5">
+                <!--使用kindEditor需创建一个textarea声明一个id-->
                 <textarea class="input js-editor" id="editor_singcms" name="content" rows="20" ></textarea>
               </div>
             </div>
@@ -195,24 +200,24 @@
 
 </div>
 <script>
-  var SCOPE = {
-    'save_url' : 'admin.php?c=content&a=add',
-    'jump_url' : 'admin.php?c=content',
-    'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
-    'ajax_upload_swf' : 'Public/js/party/uploadify.swf',
-  };
+    var SCOPE = {
+        'save_url' : 'admin.php?c=content&a=add',
+        'jump_url' : 'admin.php?c=content',
+        'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
+        'ajax_upload_swf' : 'Public/js/party/uploadify.swf',
+    };
 
 </script>
 <!-- /#wrapper -->
 <script src="Public/js/admin/image.js"></script>
 <script>
-  // 6.2
-  KindEditor.ready(function(K) {
-    window.editor = K.create('#editor_singcms',{
-      uploadJson : '/admin.php?c=image&a=kindupload',
-      afterBlur : function(){this.sync();}, //
+    // 6.2
+    KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_singcms',{
+            uploadJson : 'admin.php?c=image&a=kindupload',  //上传的接口
+            afterBlur : function(){this.sync();}, //
+        });
     });
-  });
 </script>
 <script src="/news_cms/Public/js/admin/common.js"></script>
 
