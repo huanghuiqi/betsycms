@@ -1,6 +1,7 @@
 /**
  * 图片上传功能
  */
+
 $(function() {
     // 上传按钮
     $('#file_upload').uploadify({
@@ -27,6 +28,7 @@ $(function() {
             }
         },
     });
+
 });
 
 
