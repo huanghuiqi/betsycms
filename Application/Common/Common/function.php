@@ -57,6 +57,40 @@ function getStatus($status){
     return $str;
 }
 
+//获取文章管理的栏目名
+function getCatName($navs,$id){
+    foreach ($navs as $nav){
+        $navList[$nav['menu_id']] = $nav['name'];
+    }
+    return isset($navList[$id]) ? $navList[$id] : '';
+}
+
+//获取文章来源
+function getCopyFrom($id){
+    $copyFrom = C('COPY_FROM');
+    return $copyFrom[$id] ? $copyFrom[$id] : '';
+}
+
+//文章是预览图
+function isThumb($thumb){
+    if($thumb){
+        return '<span style="color:red">有</span>';
+    }else{
+        return '无';
+    }
+}
+
+//文章状态
+function status($status){
+    if($status == 1){
+        $str = "<span style=\"color:red\">正常</span>";
+    }else{
+        $str = "关闭";
+    }
+    return $str;
+}
+
+
 //返回kindEditor的内容 不能用show 另外定义一个方法
 function showKind($status,$data){
     header('Content-type:application/json;charset=UTF-8');

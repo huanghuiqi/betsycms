@@ -109,25 +109,21 @@
             <div class="form-group">
               <label for="inputname" class="col-sm-2 control-label">标题:</label>
               <div class="col-sm-5">
-                <input type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题">
+                <input value="<?php echo ($news["title"]); ?>" type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题">
               </div>
             </div>
             <div class="form-group">
               <label for="inputname" class="col-sm-2 control-label">短标题:</label>
               <div class="col-sm-5">
-                <input type="text" name="small_title" class="form-control" id="inputname" placeholder="请填写短标题">
+                <input value="<?php echo ($news["small_title"]); ?>" type="text" name="small_title" class="form-control" id="inputname" placeholder="请填写短标题">
               </div>
             </div>
             <div class="form-group">
               <label for="inputname" class="col-sm-2 control-label">缩图:</label>
               <div class="col-sm-5">
-
                 <input id="file_upload"  type="file" multiple="true" >
-                <!--展示图片的 img 默认情况是隐藏的-->
-                <img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
-                <!--file_upload_image存放上传的图片的位置 提交的时候从这里获取数据-->
-
-                <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
+                <img style="display: none" id="upload_org_code_img" src="<?php echo ($news["thumb"]); ?>" width="150" height="150">
+                <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="<?php echo ($news["thumb"]); ?>">
               </div>
             </div>
             <div class="form-group">
@@ -135,7 +131,7 @@
               <div class="col-sm-5">
                 <select class="form-control" name="title_font_color">
                   <option value="">==请选择颜色==</option>
-                  <?php if(is_array($titleFontColor)): foreach($titleFontColor as $key=>$color): ?><option value="<?php echo ($key); ?>"><?php echo ($color); ?></option><?php endforeach; endif; ?>
+                    <?php if(is_array($titleFontColor)): foreach($titleFontColor as $key=>$color): ?><option value="<?php echo ($key); ?>" <?php if($key == $news['title_font_color']): ?>selected="selected"<?php endif; ?>><?php echo ($color); ?></option><?php endforeach; endif; ?>
                 </select>
               </div>
             </div>
@@ -143,8 +139,7 @@
               <label for="inputname" class="col-sm-2 control-label">所属栏目:</label>
               <div class="col-sm-5">
                 <select class="form-control" name="catid">
-
-                  <?php if(is_array($webSiteMenus)): foreach($webSiteMenus as $key=>$sitenav): ?><option value="<?php echo ($sitenav["menu_id"]); ?>"><?php echo ($sitenav["name"]); ?></option><?php endforeach; endif; ?>
+                  <?php if(is_array($webSiteMenus)): foreach($webSiteMenus as $key=>$sitenav): ?><option value="<?php echo ($sitenav["menu_id"]); ?>" <?php if($sitenav['menu_id'] == $news['catid']): ?>selected="selected"<?php endif; ?>><?php echo ($sitenav["name"]); ?></option><?php endforeach; endif; ?>
                 </select>
               </div>
             </div>
@@ -153,7 +148,7 @@
               <label for="inputname" class="col-sm-2 control-label">来源:</label>
               <div class="col-sm-5">
                 <select class="form-control" name="copyfrom">
-                  <?php if(is_array($copyFrom)): foreach($copyFrom as $key=>$cfrom): ?><option value="<?php echo ($key); ?>"><?php echo ($cfrom); ?></option><?php endforeach; endif; ?>
+                  <?php if(is_array($copyFrom)): foreach($copyFrom as $key=>$cfrom): ?><option value="<?php echo ($key); ?>" <?php if($key == $news['copyfrom']): ?>selected="selected"<?php endif; ?>><?php echo ($cfrom); ?></option><?php endforeach; endif; ?>
                 </select>
               </div>
             </div>
@@ -161,23 +156,22 @@
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">内容:</label>
               <div class="col-sm-5">
-                <!--使用kindEditor需创建一个textarea声明一个id-->
-                <textarea class="input js-editor" id="editor_singcms" name="content" rows="20" ></textarea>
+                <textarea class="input js-editor" id="editor_singcms" name="content" rows="20" ><?php echo ($news["content"]); ?></textarea>
               </div>
             </div>
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">描述:</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" name="description" id="inputPassword3" placeholder="描述">
+                <input value="<?php echo ($news["description"]); ?>" type="text" class="form-control" name="description" id="inputPassword3" placeholder="描述">
               </div>
             </div>
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">关键字:</label>
               <div class="col-sm-5">
-                <input type="text" class="form-control" name="keywords" id="inputPassword3" placeholder="请填写关键词">
+                <input value="<?php echo ($news["keywords"]); ?>" type="text" class="form-control" name="keywords" id="inputPassword3" placeholder="请填写关键词">
               </div>
             </div>
-
+            <input type="hidden" name="news_id" value="<?php echo ($news["news_id"]); ?>"/>
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
@@ -200,24 +194,30 @@
 
 </div>
 <script>
-    var SCOPE = {
-        'save_url' : 'admin.php?c=content&a=add',
-        'jump_url' : 'admin.php?c=content',
-        'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
-        'ajax_upload_swf' : 'Public/js/party/uploadify.swf',
-    };
+  var SCOPE = {
+    'save_url' : 'admin.php?c=content&a=add',
+    'jump_url' : 'admin.php?c=content',
+    'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
+    'ajax_upload_swf' : 'Public/js/party/uploadify.swf',
+  };
 
 </script>
 <!-- /#wrapper -->
 <script src="Public/js/admin/image.js"></script>
 <script>
-    // 6.2
-    KindEditor.ready(function(K) {
-        window.editor = K.create('#editor_singcms',{
-            uploadJson : 'admin.php?c=image&a=kindupload',  //上传的接口
-            afterBlur : function(){this.sync();}, //
-        });
+  // 6.2
+  KindEditor.ready(function(K) {
+    window.editor = K.create('#editor_singcms',{
+      uploadJson : 'admin.php?c=image&a=kindupload',
+      afterBlur : function(){this.sync();}, //
     });
+  });
+</script>
+<script>
+  var thumb = "<?php echo ($news["thumb"]); ?>";
+  if(thumb) {
+    $("#upload_org_code_img").show();
+  }
 </script>
 <script src="/news_cms/Public/js/admin/common.js"></script>
 

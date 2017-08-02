@@ -1,3 +1,7 @@
+<?php
+    $catid = $_GET['catid'];
+    $title = $_GET['title'];
+?>
 <include file="Index/header" />
 <body>
 <div id="wrapper">
@@ -32,8 +36,8 @@
                             <span class="input-group-addon">栏目</span>
                             <select class="form-control" name="catid">
                                 <option value='' >全部分类</option>
-                                <foreach name="webSiteMenu" item="sitenav">
-                                    <option value="{$sitenav.menu_id}" >{$sitenav.name}</option>
+                                <foreach name="webSiteMenus" item="sitenav">
+                                    <option value="{$sitenav.menu_id}" <if condition="$sitenav.menu_id eq $catid">selected="selected"</if>>{$sitenav.name}</option>
                                 </foreach>
                             </select>
                         </div>
@@ -42,7 +46,7 @@
                     <input type="hidden" name="a" value="index"/>
                     <div class="col-md-3">
                         <div class="input-group">
-                            <input class="form-control" name="title" type="text" value="" placeholder="文章标题" />
+                            <input class="form-control" name="title" type="text" value="<?=$title ?>" placeholder="文章标题" />
                             <span class="input-group-btn">
                   <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
                 </span>
@@ -77,18 +81,20 @@
                                         <td><input size=4 type='text'  name='listorder[{$new.news_id}]' value="{$new.listorder}"/></td><!--6.7-->
                                         <td>{$new.news_id}</td>
                                         <td>{$new.title}</td>
-                                        <td>{$new.catid|getCatName=$webSiteMenu,###}</td>
-                                        <td>{$new.copyfrom|getCopyFromById}</td>
+                                        <td>{$new.catid|getCatName=$webSiteMenus,###}</td>
+                                        <!--表示getCatName函数传入两个参数，每个参数用逗号分割，这里第一个参数是$webSiteMenus，第二个参数是前面要输出的$new.catid变量，因为该变量是第二个参数，因此需要用###标识变量位置-->
+                                        <td>{$new.copyfrom|getCopyFrom}</td>
                                         <td>
                                             {$new.thumb|isThumb}
                                         </td>
-                                        <td>{$new.create_time|date="Y-m-d H:i",###}</td>
-                                        <td><span  attr-status="<if condition="$new['status'] eq 1">0<else/>1</if>"  attr-id="{$new.news_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$new.status|status}</span></td>
-                                        <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$new.news_id}" ></span>
+                                        <td>{$new.create_time|date="Y-m-d H:i:s",###}</td>
+                                        <td><span attr-status="<if condition=" $new['status'] eq 1">0<else/>1</if>"  attr-id="{$new.news_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$new.status|status}</span></td>
+                                        <td>
+                                            <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$new.news_id}" ></span>
                                             <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$new.news_id}"  attr-message="删除">
                                                 <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                             </a>
-                                            <a target="_blank" href="/index.php?c=detail&a=view&id={$new.news_id}" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>
+                                            <a target="_blank" href="index.php?c=detail&a=view&id={$new.news_id}" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>
 
                                         </td>
                                     </tr>
@@ -98,7 +104,7 @@
                             </table>
                             <nav>
 
-                                <ul >
+                                <ul class="pagination">
                                     {$pageres}
                                 </ul>
 

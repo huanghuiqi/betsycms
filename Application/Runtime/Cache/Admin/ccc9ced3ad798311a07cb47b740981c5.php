@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); $catid = $_GET['catid']; $title = $_GET['title']; ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -110,7 +111,7 @@
                             <span class="input-group-addon">栏目</span>
                             <select class="form-control" name="catid">
                                 <option value='' >全部分类</option>
-                                <?php if(is_array($webSiteMenu)): foreach($webSiteMenu as $key=>$sitenav): ?><option value="<?php echo ($sitenav["menu_id"]); ?>" ><?php echo ($sitenav["name"]); ?></option><?php endforeach; endif; ?>
+                                <?php if(is_array($webSiteMenus)): foreach($webSiteMenus as $key=>$sitenav): ?><option value="<?php echo ($sitenav["menu_id"]); ?>" <?php if($sitenav["menu_id"] == $catid): ?>selected="selected"<?php endif; ?>><?php echo ($sitenav["name"]); ?></option><?php endforeach; endif; ?>
                             </select>
                         </div>
                     </div>
@@ -118,7 +119,7 @@
                     <input type="hidden" name="a" value="index"/>
                     <div class="col-md-3">
                         <div class="input-group">
-                            <input class="form-control" name="title" type="text" value="" placeholder="文章标题" />
+                            <input class="form-control" name="title" type="text" value="<?=$title ?>" placeholder="文章标题" />
                             <span class="input-group-btn">
                   <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
                 </span>
@@ -152,18 +153,20 @@
                                         <td><input size=4 type='text'  name='listorder[<?php echo ($new["news_id"]); ?>]' value="<?php echo ($new["listorder"]); ?>"/></td><!--6.7-->
                                         <td><?php echo ($new["news_id"]); ?></td>
                                         <td><?php echo ($new["title"]); ?></td>
-                                        <td><?php echo (getCatName($webSiteMenu,$new["catid"])); ?></td>
-                                        <td><?php echo (getCopyFromById($new["copyfrom"])); ?></td>
+                                        <td><?php echo (getCatName($webSiteMenus,$new["catid"])); ?></td>
+                                        <!--表示getCatName函数传入两个参数，每个参数用逗号分割，这里第一个参数是$webSiteMenus，第二个参数是前面要输出的$new.catid变量，因为该变量是第二个参数，因此需要用###标识变量位置-->
+                                        <td><?php echo (getCopyFrom($new["copyfrom"])); ?></td>
                                         <td>
                                             <?php echo (isThumb($new["thumb"])); ?>
                                         </td>
-                                        <td><?php echo (date("Y-m-d H:i",$new["create_time"])); ?></td>
-                                        <td><span  attr-status="<?php if($new['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($new["news_id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (status($new["status"])); ?></span></td>
-                                        <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($new["news_id"]); ?>" ></span>
+                                        <td><?php echo (date("Y-m-d H:i:s",$new["create_time"])); ?></td>
+                                        <td><span attr-status="<?php if( $new['status'] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($new["news_id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (status($new["status"])); ?></span></td>
+                                        <td>
+                                            <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($new["news_id"]); ?>" ></span>
                                             <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($new["news_id"]); ?>"  attr-message="删除">
                                                 <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                             </a>
-                                            <a target="_blank" href="/index.php?c=detail&a=view&id=<?php echo ($new["news_id"]); ?>" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>
+                                            <a target="_blank" href="index.php?c=detail&a=view&id=<?php echo ($new["news_id"]); ?>" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>
 
                                         </td>
                                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -172,7 +175,7 @@
                             </table>
                             <nav>
 
-                                <ul >
+                                <ul class="pagination">
                                     <?php echo ($pageres); ?>
                                 </ul>
 

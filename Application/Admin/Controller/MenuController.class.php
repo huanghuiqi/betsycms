@@ -10,7 +10,7 @@ class MenuController extends CommonController{
          * 分页操作逻辑 tp自带page库
          * */
         $page  = $_REQUEST['p'] ? $_REQUEST['p'] : 1;
-        $pageSize = $_REQUEST['pageSize'] ? $_REQUEST['pageSize'] : 10;
+        $pageSize = $_REQUEST['pageSize'] ? $_REQUEST['pageSize'] : 5;
         //获取数据
         $data = array();
         if(isset($_REQUEST['type']) && in_array($_REQUEST['type'],array(0,1))){
@@ -49,9 +49,9 @@ class MenuController extends CommonController{
                 show(0,'方法名不能为空');
             }
             //更新操作
-//            if($_POST['menu_id']){
-//                return $this->save($_POST);   // 1
-//            }
+            if($_POST['menu_id']){
+                return $this->save($_POST);   // 1
+            }
             $menuID = D('Menu')->insert($_POST);
             if($menuID){
                 return show(1,"新增成功",$menuID);
