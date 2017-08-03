@@ -147,4 +147,22 @@ class ContentController extends CommonController{
             return show(0,$e->getMessage());
         }
     }
+
+    public function setStatus(){
+        try{
+            if($_POST){
+                $newsID = $_POST['id'];
+                $status = $_POST['status'];
+                $res = D('News')->updateStatusById($newsID,$status);
+                if($res){
+                    return show(1,'操作成功');
+                }else{
+                    return show(0,'操作失败了~');
+                }
+            }
+            return show(0,'没有提交内容');
+        }catch(Exception $e){
+            return show(0,$e->getMessage());
+        }
+    }
 }

@@ -67,6 +67,32 @@ $('.singcms-table #singcms-delete').on('click',function(){
     });
 });
 
+//更改状态
+$('.singcms-table #singcms-on-off').on('click',function(){
+    var id = $(this).attr('attr-id');
+    var status = $(this).attr('attr-status');
+    var url = SCOPE.set_status_url;
+
+    pdata = {};
+    pdata['id'] = id;
+    pdata['status'] = status;
+
+    layer.open({
+        type : 0,
+        title : '是否提交？',
+        btn: ['yes', 'no'],
+        icon : 3,
+        closeBtn : 2,
+        content: "是否确定更改？",
+        scrollbar: true,
+        yes: function(){
+            // 执行相关跳转
+            todelete(url, pdata);
+        },
+
+    });
+});
+
 //删除
 function todelete (url,data) {
     $.post(url,data,function (res) {

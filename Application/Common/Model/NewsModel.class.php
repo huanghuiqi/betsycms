@@ -66,4 +66,16 @@ class NewsModel extends Model
         }
         return $this->_db->where('news_id='.$id)->save($data);
     }
+
+    //删除
+    public function updateStatusById($id,$status){
+        if(!$id || !is_numeric($id)){
+            throw_exception('id不合法');
+        }
+        if(!$status || !is_numeric($status)){
+            throw_exception('ststus值不合法');
+        }
+        $data['status'] = $status;
+        return $this->_db->where('news_id='.$id)->save($data);
+    }
 }

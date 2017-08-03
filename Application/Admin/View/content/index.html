@@ -88,7 +88,7 @@
                                             {$new.thumb|isThumb}
                                         </td>
                                         <td>{$new.create_time|date="Y-m-d H:i:s",###}</td>
-                                        <td><span attr-status="<if condition=" $new['status'] eq 1">0<else/>1</if>"  attr-id="{$new.news_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$new.status|status}</span></td>
+                                        <td><span attr-status="<if condition=" $new['status'] eq 1">-1<else/>1</if>"  attr-id="{$new.news_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" attr-message="删除">{$new.status|status}</span></td>
                                         <td>
                                             <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$new.news_id}" ></span>
                                             <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$new.news_id}"  attr-message="删除">
