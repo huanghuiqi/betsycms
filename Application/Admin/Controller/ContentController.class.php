@@ -165,4 +165,28 @@ class ContentController extends CommonController{
             return show(0,$e->getMessage());
         }
     }
+
+    //排序
+    public function listorder(){
+        $listorder = $_POST['listorder'];
+        $error = [];
+        if($listorder){
+            try{
+                foreach ($listorder as $newID=>$listVal){
+                    $id = D('News')->updateListorderById($newID,$listVal);
+                    if($id === false){
+                        $error[] = $id;
+                    }
+                }
+            }catch(Exception $e){
+                return show(0,$e->getMessage());
+            }
+            if($error){
+                return show(0,'排序失败 '.implode($error,','));
+            }else{
+                return show(1,'更新排序成功');
+            }
+        }
+        return show(0,'更新排序失败');
+    }
 }

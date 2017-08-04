@@ -112,7 +112,6 @@ $('#button-listorder').on('click',function(){
     $(data).each(function(i){
         postData[this.name] = this.value;
     })
-
     var url = SCOPE.listorder_url;
     //将获取到的数据post到服务器
     $.post(url,postData,function(res){

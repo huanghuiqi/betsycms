@@ -78,4 +78,15 @@ class NewsModel extends Model
         $data['status'] = $status;
         return $this->_db->where('news_id='.$id)->save($data);
     }
+
+    //更新排序
+    public function updateListorderById($id,$listorder){
+        if(!$id || !is_numeric($id)){
+            throw_exception('id不合法');
+        }
+        $data = array(
+            'listorder' => $listorder
+        );
+        return $this->_db->where('news_id='.$id)->save($data);
+    }
 }
