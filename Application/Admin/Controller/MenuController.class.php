@@ -4,7 +4,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Exception;
 
-class MenuController extends CommonController{
+class MenuController extends Controller{
     public function index(){
         /*
          * 分页操作逻辑 tp自带page库

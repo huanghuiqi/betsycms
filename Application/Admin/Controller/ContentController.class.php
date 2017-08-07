@@ -4,11 +4,15 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Exception;
 
-class ContentController extends CommonController{
+class ContentController extends Controller{
     public function index(){
         //栏目下拉列表内容
         $webSiteMenus = D('Menu')->getFrontMenus();
         $this->assign('webSiteMenus',$webSiteMenus);
+
+        //推荐位内容
+        $positions = D('Position')->getNormalPosition();
+        $this->assign('positions',$positions);
 
         //搜索功能
         $conds = '';
@@ -20,7 +24,7 @@ class ContentController extends CommonController{
         }
 
         $page = $_REQUEST['p'] ? $_REQUEST['p'] : 1;
-        $pageSize = 2;   //默认10
+        $pageSize = 5;   //默认10
         $conds['status'] = array('neq',-1);
         $newsList = D('News') -> getNews($conds,$page,$pageSize);
         $newsCount = D('News') -> getNewsCount($conds);
@@ -165,6 +169,9 @@ class ContentController extends CommonController{
             return show(0,$e->getMessage());
         }
     }
+
+    //汇报上周工作
+    //上周主要是在一边做一个新闻内容管理系统一边巩固php知识
 
     //排序
     public function listorder(){

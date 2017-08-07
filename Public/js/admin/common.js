@@ -36,7 +36,7 @@ $('#singcms-button-submit').on('click',function(){
 $('.singcms-table #singcms-edit').on('click',function(){
     var ID = $(this).attr('attr-id');
     window.location.href = SCOPE.edit_url+'&id='+ID;
-})
+});
 
 /*
  * 删除菜单名操作
@@ -116,10 +116,26 @@ $('#button-listorder').on('click',function(){
     //将获取到的数据post到服务器
     $.post(url,postData,function(res){
         if(res.status == 1){
-            console.log(res)
+            //console.log(res)
             return dialog.success(res.message,'');
         }else if(res.stutus == 0){
             return dialog.error(res.message);
         }
     },'JSON');
-})
+});
+
+//推送相关
+$('#singcms-push').on('click',function(){
+    var positionId = $('#select-push').val();
+    if(positionId == 0){
+        return dialog.error('请选择推荐位');
+    }
+    var push = {};
+    var postData = {};
+    $("input[name='pushcheck']:checked").each(function(i){
+        push[i] = $(this).val();  //获取这个文章的id
+    });
+    postData[positionId] = positionId;
+    postData[push] = push;
+    
+});

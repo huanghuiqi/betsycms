@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Upload;
 
-class ImageController extends CommonController{
+class ImageController extends Controller{
     private $_uploadObj;
 
     public function __construct(){
