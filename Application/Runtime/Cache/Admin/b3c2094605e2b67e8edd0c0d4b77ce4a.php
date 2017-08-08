@@ -103,19 +103,19 @@
         </div>
 
         <div class="row">
-            <form action="/admin.php" method="get">
+            <form action="admin.php" method="get">
                 <div class="col-md-3">
-                    <div class="input-group">
+                    <div class="input-group" style="margin-top: 20px">
                         <span class="input-group-addon">推荐位</span>
                         <select class="form-control" name="position_id">
                             <?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>"<?php if($position['id'] == $positionId): ?>selected="selected"<?php endif; ?> ><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
                         </select>
                     </div>
                 </div>
-                <input type="hidden" name="c" value="positioncontent"/>
+                <input type="hidden" name="c" value="positionContent"/>
                 <input type="hidden" name="a" value="index"/>
                 <div class="col-md-3">
-                    <div class="input-group">
+                    <div class="input-group" style="margin-top: 20px">
                         <input class="form-control" name="title" type="text" value="<?php echo ($title); ?>" placeholder="文章标题" />
                 <span class="input-group-btn">
                   <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
@@ -184,10 +184,10 @@
 <!-- /#wrapper -->
 <script>
     var SCOPE = {
-        'edit_url' : '/admin.php?c=positioncontent&a=edit',
-        'set_status_url' : '/admin.php?c=positioncontent&a=setStatus',
-        'add_url' : '/admin.php?c=positioncontent&a=add',
-        'listorder_url' : '/admin.php?c=positioncontent&a=listorder',
+        'edit_url' : 'admin.php?c=positioncontent&a=edit',
+        'set_status_url' : 'admin.php?c=positioncontent&a=setStatus',
+        'add_url' : 'admin.php?c=positioncontent&a=add',
+        'listorder_url' : 'admin.php?c=positioncontent&a=listorder',
     }
 
 </script>

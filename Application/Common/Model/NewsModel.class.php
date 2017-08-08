@@ -56,6 +56,17 @@ class NewsModel extends Model
         return $this->_db->where('news_id='.$id)->find();
     }
 
+    //根据一个id数组获取数据
+    public function getNewByIdIn($newsIds){
+        if(!$newsIds || !is_array($newsIds)){
+            throw_exception('id不合法');
+        }
+        $data = array(
+            'news_id' => array('in',implode(',',$newsIds))
+        );
+        return $this->_db->where($data)->select();
+    }
+
     //更新信息
     public function updataNewsById($data,$id){
         if(!$id || !is_numeric($id)){

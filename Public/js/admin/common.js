@@ -135,7 +135,16 @@ $('#singcms-push').on('click',function(){
     $("input[name='pushcheck']:checked").each(function(i){
         push[i] = $(this).val();  //获取这个文章的id
     });
-    postData[positionId] = positionId;
-    postData[push] = push;
-    
+    postData['positionId'] = positionId;
+    postData['push'] = push;
+    //console.log(postData);return;
+    var url = SCOPE.push_url;
+
+    $.post(url,postData,function(res){
+        if(res.status == 1){
+            return dialog.success(res.message,res['data']['jump_url']);
+        }else if(res.status == 0){
+            return dialog.error(res.message);
+        }
+    },'JSON');
 });

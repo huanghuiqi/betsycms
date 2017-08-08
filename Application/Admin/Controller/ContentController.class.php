@@ -196,4 +196,40 @@ class ContentController extends Controller{
         }
         return show(0,'更新排序失败');
     }
+
+    //推送相关
+    public function push(){
+        $jumpUrl = $_SERVER['HTTP_REFERER'];
+        $positionId = intval($_POST['positionId']);
+        $news_id = $_POST['push'];
+        if(!$positionId){
+            return show(0,'推荐位id不存在');
+        }
+        if(!$news_id || !is_array($news_id)){
+            return show(0,'推送新闻内容为空！');
+        }
+        //通过新闻id数组来获取新闻
+        try{
+            $newsList = D('News')->getNewByIdIn($news_id);
+            if(!$newsList){
+                show(0,'没有相关内容');
+            }
+            foreach ($newsList as $new){
+                $data = array(
+                    'position_id' => $positionId,
+                    'title' => $new['title'],
+                    'thumb' => $new['thumb'],
+                    'news_id' => $new['news_id'],
+                    'status' => $new['status'],
+                    'create_time' => $new['create_time']
+                );
+            }
+            $position = D('PositionContent')->insert($data);
+        }catch(Exception $e){
+            return show(0,$e->getMessage());
+        }
+        if($position){
+            return show(1,'推送成功',array('jump_url'=>$jumpUrl));
+        }
+    }
 }
