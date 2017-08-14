@@ -78,7 +78,7 @@ INSERT INTO `cms_menu` (`menu_id`, `name`, `parentid`, `m`, `c`, `f`, `data`, `l
 (7, '用户管理', 0, 'admin', 'user', 'index', '', 0, -1, 1),
 (8, '科技', 0, 'home', 'cat', 'index', '', 4, 1, 0),
 (9, '推荐位管理', 0, 'admin', 'position', 'index', '', 4, 1, 1),
-(10, '推荐位内容管理', 0, 'admin', 'positioncontent', 'index', '', 1, 1, 1),
+(10, '推荐位内容管理', 0, 'admin', 'positionContent', 'index', '', 1, 1, 1),
 (11, '基本管理', 0, 'admin', 'basic', 'index', '', 3, 1, 1),
 (12, '新闻', 0, 'home', 'cat', 'index', '', 3, 1, 0),
 (13, '用户管理', 0, 'admin', 'admin', 'index', '', 0, 1, 1),
