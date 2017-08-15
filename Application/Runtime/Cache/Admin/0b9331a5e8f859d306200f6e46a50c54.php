@@ -183,8 +183,8 @@
   }
 </script>
 <!-- /#wrapper -->
-<script type="text/javascript" src="/Public/js/admin/form.js"></script>
-<script src="/Public/js/admin/image.js"></script>
+<!--<script type="text/javascript" src="Public/js/admin/form.js"></script>-->
+<script src="Public/js/admin/image.js"></script>
 <script src="/news_cms/Public/js/admin/common.js"></script>
 
 

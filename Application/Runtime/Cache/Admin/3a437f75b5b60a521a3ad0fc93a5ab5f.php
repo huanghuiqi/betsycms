@@ -158,7 +158,7 @@
     }
     $(".singcms-table #sing-add-position-content").on('click',function(){
         var id = $(this).attr('attr-id');
-        window.location.href='admin.php?c=positioncontent&a=index&position_id='+id;
+        window.location.href='admin.php?c=positionContent&a=index&position_id='+id;
     });
 </script>
 <script src="/news_cms/Public/js/admin/common.js"></script>
